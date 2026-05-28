@@ -1,0 +1,7 @@
+access_token                = "YOUR_ACCESS_TOKEN_HERE"
+access_token_secret         = "YOUR_ACCESS_TOKEN_SECRET_HERE"
+email_address               = "your-address@example.com"
+service_principal_key_kid   = "YOUR_SERVICE_PRINCIPAL_KEY_KID"
+service_principal_resource_id = "YOUR_SERVICE_PRINCIPAL_RESOURCE_ID"
+service_principal_private_key_pem_path = "C:/path/to/private_key.pem"
+service_principal_private_key_b64_chunk_size = 500

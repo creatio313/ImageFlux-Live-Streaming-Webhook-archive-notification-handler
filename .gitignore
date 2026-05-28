@@ -1,0 +1,17 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+/*** Terraform ***/
+# Terraform variables and secrets
+/terraform/*.tfvars
+/terraform/*.tfvars.json
+!/terraform/*.tfvars.example
+
+# Terraform state files
+/terraform/terraform.tfstate
+/terraform/terraform.tfstate.*
+/terraform/.terraform.tfstate.lock.info
+
+# Terraform directory
+/terraform/.terraform/
+
+# SSH keys and sensitive files
+/terraform/.ssh/
