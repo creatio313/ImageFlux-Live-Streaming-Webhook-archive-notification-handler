@@ -41,8 +41,8 @@ type WebhookPayload struct {
 
 // アーカイブ作成時のイベントWebhook通知のうち、dataの子項目
 type WebhookData struct {
-	DestURI     string `json:"dest_uri"`
-	FilePath    string `json:"file_path"`
+	CurrentDestURI  string `json:"current_dest_uri"`
+	CurrentFilePath string `json:"current_file_path"`
 	Size        int64  `json:"size"`
 	FileType    string `json:"file_type"`
 	AbsoluteURL string `json:"absolute_url"`
@@ -180,8 +180,8 @@ func webhookHandler(notifier *simpleNotificationClient) http.HandlerFunc {
 		// フィルタリング対象のtype値の場合は内容を変数化して判定する。
 		channelID := payload.ChannelID
 		eventType := payload.Type
-		destURI := payload.Data.DestURI
-		filePath := payload.Data.FilePath
+		destURI := payload.Data.CurrentDestURI
+		filePath := payload.Data.CurrentFilePath
 		size := payload.Data.Size
 		fileType := payload.Data.FileType
 		absoluteURL := payload.Data.AbsoluteURL

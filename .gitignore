@@ -1,4 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+/*** 鍵関連 ***/
+.keys/
+
 /*** Terraform ***/
 # Terraform variables and secrets
 /terraform/*.tfvars
